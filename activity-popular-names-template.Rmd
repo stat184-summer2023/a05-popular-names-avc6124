@@ -57,8 +57,8 @@ My answer here....
 ## Look at the data a few different ways (see Ch 9 for more).
 
 head(BabyNames) #summary function 1 
-
-?BabyNames #summary function 2
+view(BabyNames) #summary function 2
+?BabyNames
 ```
 
 Question 1: What are the variables are available?
