@@ -79,23 +79,23 @@ The "Sex" variable of the baby does not appear on the graph.
 
 ##### What variable(s) in the graph are similar to corresponding variables in the raw data table, but might have been transformed in some way?
 
-The "Count" variable has been transformed as "Popularity."
+The "Count" variable has been transformed as "Popularity." Also, the sex variable has been grouped so the names are represented as one variable and not split by gender.
 
 ### Step 4
 
 ##### Have cases been filtered out?
 
+All cases that don't include the names "Abraham," "Franklin," or "Woodrow" have been filtered out.
 
 
 ##### Have cases been grouped and summarized within groups in any way?
 
-My answer here.... 
+Te names with two genders have been grouped so any cases of multiple genders concering the names "Abraham," "Franklin," or "Woodrow" have been grouped
 
 
 ##### Have any new variables been introduced?  If so, what the relationship between the new variables and existing variables?
 
-My answer here.... 
-
+A new name for the count variable have been introduced as "popularity" the data inside the variables are the same just the name has changed.
 
 ### Step 5
 
