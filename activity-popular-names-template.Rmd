@@ -102,6 +102,7 @@ A new name for the count variable have been introduced as "popularity" the data 
 
 Using the BabyNames data set, filter the data to display just the 5 names that you picked.  Then group the cases by year and name, and count how many total births per year were recorded for each of the names (regardless of sex).  
 
+-Alice, Zyra, Aaron, Aaban, Aadam 
 
 ### Step 6
 
@@ -112,9 +113,22 @@ Using the BabyNames data set, filter the data to display just the 5 names that y
 ```{r}
 ## Create my glyph ready data set here
 
+picked_names <- 
+  c("Alice", "Robert", "Aaron", "Julie", "Adam")
+
+picked_names <-
+  BabyNames %>%
+  filter(name %in% picked_names)
+
+total_births <-
+  picked_names %>%
+  group_by(year, name) %>%
+  summarize(total_births = sum(count))
 
 # inspect the result
 
+head(total_births)
+view(total_births)
 
 ```
 
@@ -138,6 +152,12 @@ If you prepared your `GlyphReadyForm` data set correctly, you should just be abl
 ```{r}
 #My code here 
 
+ggplot(total_births) +
+  aes(x = year, y = total_births, colour = name) +
+  geom_line() +
+  scale_color_hue(direction = 1) +
+  labs(y = "Popularity ") +
+  theme_minimal()
 
 ```
 
